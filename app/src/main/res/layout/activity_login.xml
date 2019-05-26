@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <ImageView
+                    style="@style/ImageViewBig"
+                    android:focusableInTouchMode="true"
+                    android:src="@drawable/logo_ugm"/>
+
+            <TextView
+                    style="@style/TextBig"
+                    android:textColor="@color/black"
+                    android:text="SIMASTER UGM"
+                    android:layout_marginTop="24dp"/>
+
+            <TextView
+                    style="@style/TextDescription"
+                    android:text="Integrasi Sistem Informasi\nUniversitas Gadjah Mada"
+                    android:layout_marginBottom="24dp"/>
+
+            <TextView
+                    style="@style/TextViewEdit"
+                    android:textColor="@color/black"
+                    android:text="@string/email"/>
+
+            <EditText
+                    android:id="@+id/et_email"
+                    android:hint="username@mail.ugm.ac.id"
+                    style="@style/EditTextCustom"/>
+
+            <TextView
+                    style="@style/TextViewEdit"
+                    android:textColor="@color/black"
+                    android:text="@string/kata_sandi"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/etPasswordLayout"
+                    style="@style/EditTextCustom"
+                    app:hintEnabled="false"
+                    app:hintAnimationEnabled="false"
+                    app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="your passwrod"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                    style="@style/TextViewEdit"
+                    android:textColor="@color/blue"
+                    android:text="Lupa kata sandi ?"/>
+            <Button
+                    style="@style/ButtonCustom"
+                    android:layout_width="match_parent"
+                    android:text="@string/masuk"
+                    android:background="@drawable/button_rectangel"
+                    android:id="@+id/btn_masuk"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dont_have_account"/>
+
+                <TextView
+                        android:id="@+id/tv_register"
+                        android:textColor="@color/blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textStyle="bold"
+                        android:text="@string/create_account"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            layout="@layout/progress_bar"/>
+
+</RelativeLayout>

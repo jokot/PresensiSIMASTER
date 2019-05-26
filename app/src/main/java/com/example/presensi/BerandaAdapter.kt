@@ -1,20 +1,21 @@
 package com.example.presensi
 
 
-import android.support.v7.widget.RecyclerView
+//import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.item_view.view.*
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.item_view_b.view.*
 
 
-class MainAdapter(
+class BerandaAdapter(
     private var list: MutableList<String>
-) : RecyclerView.Adapter<MainAdapter.HomeViewHolder>() {
+) : RecyclerView.Adapter<BerandaAdapter.HomeViewHolder>() {
 
-    override fun onCreateViewHolder(group: ViewGroup, viewType: Int): MainAdapter.HomeViewHolder {
+    override fun onCreateViewHolder(group: ViewGroup, viewType: Int): HomeViewHolder {
         return HomeViewHolder(
-            LayoutInflater.from(group.context).inflate(R.layout.item_view, group, false)
+            LayoutInflater.from(group.context).inflate(R.layout.item_view_b, group, false)
         )
     }
 

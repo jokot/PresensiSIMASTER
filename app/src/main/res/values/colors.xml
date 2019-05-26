@@ -2,12 +2,15 @@
 <resources>
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccentOri">#D81B60</color>
+    <color name="colorAccent">#4192FC</color>
     <color name="blue">#4192FC</color>
-    <color name="whiteGrey">#CBCDE4</color>
+    <color name="greyWhite">#CBCDE4</color>
+    <color name="whiteGrey">#EBECFF</color>
     <color name="white">#ffffff</color>
     <color name="grey">#7A7DA0</color>
     <color name="red">#F3616B</color>
+    <color name="pink">#FB6D84</color>
     <color name="orange">#F6AA3C</color>
     <color name="green">#2DDE6A</color>
     <color name="black">#1A1C29</color>

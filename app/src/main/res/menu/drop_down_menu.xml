@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/dropdown_menu1"
+            android:title="Ganjil 2016/2017"
+            android:visible="true" app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/dropdown_menu2"
+            android:title="Genap 2016/2017"
+            android:visible="true" app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/dropdown_menu3"
+            android:title="Ganjil 2017/2018"
+            android:visible="true" app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/dropdown_menu4"
+            android:title="Genap 2017/2018"
+            android:visible="true"
+            app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/dropdown_menu5"
+            android:title="Ganjil 2018/2019"
+            android:visible="true" app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/dropdown_menu6"
+            android:title="Genap 2018/2019"
+            android:visible="true"
+            app:showAsAction="ifRoom"/>
+</menu>
