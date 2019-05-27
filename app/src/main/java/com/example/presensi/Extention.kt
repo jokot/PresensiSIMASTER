@@ -11,7 +11,7 @@ fun Context.saveToken(token:String){
 }
 
 fun Context.logout(){
-    val editor  =getSharedPreferences(MainActivity.MYPREF,Context.MODE_PRIVATE).edit()
+    val editor  = getSharedPreferences(MainActivity.MYPREF,Context.MODE_PRIVATE).edit()
     editor.clear()
     editor.apply()
 }

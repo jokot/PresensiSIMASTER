@@ -1,6 +1,7 @@
 package com.example.presensi
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -33,17 +34,22 @@ class LoginActivity : AppCompatActivity(),View.OnClickListener {
     private fun setUpClick(){
         btn_masuk.setOnClickListener(this)
         tv_register.setOnClickListener(this)
+        tv_lupa.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.btn_masuk -> login()
             R.id.tv_register -> register()
+            R.id.tv_lupa -> register()
         }
     }
 
     private fun register(){
-
+        val url = "http://presensiugm.herokuapp.com/login"
+        val i = Intent(Intent.ACTION_VIEW)
+        i.data = Uri.parse(url)
+        startActivity(i)
     }
 
     private fun login(){

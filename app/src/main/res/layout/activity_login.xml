@@ -65,6 +65,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                    android:id="@+id/tv_lupa"
                     style="@style/TextViewEdit"
                     android:textColor="@color/blue"
                     android:text="Lupa kata sandi ?"/>

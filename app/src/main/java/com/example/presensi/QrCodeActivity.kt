@@ -24,7 +24,7 @@ class QrCodeActivity : AppCompatActivity() {
     private fun openCamera(){
         codeScanner= CodeScanner(this,scanner_view)
         codeScanner.camera = CodeScanner.CAMERA_BACK
-        codeScanner.formats = CodeScanner.ALL_FORMATS
+        codeScanner.formats = CodeScanner.TWO_DIMENSIONAL_FORMATS
         codeScanner.zoom = 20
         codeScanner.isTouchFocusEnabled = true
         codeScanner.autoFocusMode = AutoFocusMode.SAFE
@@ -53,11 +53,13 @@ class QrCodeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        codeScanner.releaseResources()
         codeScanner.startPreview()
     }
 
     override fun onPause() {
         super.onPause()
+        codeScanner.stopPreview()
         codeScanner.releaseResources()
     }
 }

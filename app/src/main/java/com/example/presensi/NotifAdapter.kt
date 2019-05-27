@@ -26,6 +26,9 @@ class NotifAdapter(private var list: MutableList<String>):
     inner class NotifViewHolder(view:View):RecyclerView.ViewHolder(view){
         fun bindItem(item:String){
             itemView.tv_info.text = item
+            if (item == "Anda tidak hadir pada kelas MII4513 - Manajemen Proyek Teknologi Informasi"){
+                itemView.iv_status.setImageResource(R.drawable.ic_user_uncheck)
+            }
         }
     }
 }

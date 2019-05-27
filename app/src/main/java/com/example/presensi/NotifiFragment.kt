@@ -1,5 +1,6 @@
 package com.example.presensi
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -32,6 +33,7 @@ class NotifiFragment : Fragment() {
         initRecycler()
     }
 
+    @SuppressLint("WrongConstant")
     private fun initRecycler(){
         adapter= NotifAdapter(list)
 

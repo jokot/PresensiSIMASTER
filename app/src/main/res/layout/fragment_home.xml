@@ -1,53 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".HomeFragment"
-        android:orientation="vertical">
+        android:background="@color/white"
+        android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="28dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:id="@+id/ll_appbar">
-        <ImageView
-                android:id="@+id/iv_calendar"
-                android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+        <LinearLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_bx_calendar"
-                android:paddingEnd="8dp"/>
-        <TextView
-                android:id="@+id/tv_date"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:text="Rabu, 15 Mei 2019"/>
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="28dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_appbar">
+                <ImageView
+                        android:id="@+id/iv_calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bx_calendar"
+                        android:paddingEnd="8dp"/>
+                <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
 
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_home"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
-    </androidx.recyclerview.widget.RecyclerView>
+            </androidx.recyclerview.widget.RecyclerView>
 
-    <!--<TextView android:layout_width="match_parent"-->
-              <!--android:layout_height="wrap_content"-->
-              <!--android:gravity="center"-->
-              <!--android:layout_marginTop="40dp"-->
-              <!--android:text="LIHAT SEMUA JADWAL  >"/>-->
+        </LinearLayout>
+    </ScrollView>
 
-</LinearLayout>
+    <include
+            layout="@layout/progress_bar"
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+    />
+
+</RelativeLayout>
